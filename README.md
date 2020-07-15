@@ -12,7 +12,7 @@ This is an reference repo to setup AEM dispatcher with example configurations.
     ```
 - Steps to bring up the dispatcher
 0. `docker build -t httpd-image . `
-0. `docker run -p 8080:80 --name httpd-container httpd-image`
+0. `docker run -p 8080:80 -e PUBLISH_DOMAIN=host.docker.internal -e PUBLISH_IP=host.docker.internal -e PUBLISH_PORT=4503 --name httpd-container httpd-image`
 
 #### Some docker commands
 0. `docker ps` to check current status of all running container
