@@ -1,0 +1,16 @@
+#
+# This file contains the cache rules, and can be customized.
+#
+# By default, it includes the default rules.
+#
+
+$include "./default_rules.any"
+
+/0001 {
+	/glob "*.model.json"
+	/type "allow"
+}
+/0002 {
+	/glob "*.html"
+	/type "allow"
+}
