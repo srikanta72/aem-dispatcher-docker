@@ -3,6 +3,7 @@ This is an reference repo to setup AEM dispatcher with example configurations.
 
 #### Pre-requisite
 0. Download Docker from `https://www.docker.com/products/docker-desktop`
+0. Your AEM publisher should be running and should have valid content pages that are accessible from browser. ex: `localhost:4503/content/wknd/us/en.html`
 
 #### Follow below steps
 - Add the HOST_IP and PORT if you want to hard-code the IP and port in dispatcher configuration. 
@@ -30,7 +31,7 @@ You can skip this step as this is being passed in docker run commnad in the next
 
 #### Some more points
 0. `host.docker.internal` is the alias for localhost of your host machine from docker. In case this doesn't work you can try your local LAN IP to replace this.
-0. MAC: `ifconfig`, Windows: `ipconfig` to find your local LAN IP. You can test the LAN IP directly in your browser like 198.0.1.18:4502 instead of localhost:4502 
+0. MAC: `ifconfig`, Windows: `ipconfig` to find your local LAN IP. You can test the LAN IP directly in your browser by using `198.0.1.18:4502` instead of `localhost:4502` where 198.0.1.18 should be your LAN IP you got from the previous point command.
 
 
 
