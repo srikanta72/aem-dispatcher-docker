@@ -14,6 +14,9 @@ You can skip this step as this is being passed in docker run commnad in the next
     Define AEM_HOST 192.168.1.18
     Define AEM_PORT 4503
     ```
+0. You can customize almost everything by changing something inside `src` folder. 
+Make sure if you do a major folder change you need to do the same change in dockerfile as well regarding the location.
+
 - Steps to bring up the dispatcher
 0. `docker build -t httpd-image . `
 0. `docker run -p 8080:80 -e PUBLISH_DOMAIN=host.docker.internal -e PUBLISH_IP=host.docker.internal -e PUBLISH_PORT=4503 --name httpd-container httpd-image`
