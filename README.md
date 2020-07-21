@@ -36,6 +36,10 @@ Make sure if you do a major folder change you need to do the same change in dock
 0. `host.docker.internal` is the alias for localhost of your host machine from docker. In case this doesn't work you can try your local LAN IP to replace this.
 0. MAC: `ifconfig`, Windows: `ipconfig` to find your local LAN IP. You can test the LAN IP directly in your browser by using `198.0.1.18:4502` instead of `localhost:4502` where 198.0.1.18 should be your LAN IP you got from the previous point command.
 
+- Update regarding Cache
+0. Go to `src/conf.dispatcher.d/enabled_farms/default.farm` change `/allowAuthorized "1"` from `/allowAuthorized "0"` to cache all authorized requests.
+Try this step if your cache is not generating under `/var/www/html`
+0. Check `https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/` if you do not want to use dispatcher for cache
 
 
 Inspired by https://hub.docker.com/r/aemcloud/dispatcher
