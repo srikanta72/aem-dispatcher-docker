@@ -6,8 +6,8 @@ This is an reference repo to setup AEM dispatcher with example configurations.
 0. Your AEM publisher should be running and should have valid content pages that are accessible from browser. ex: `localhost:4503/content/wknd/us/en.html`
 
 #### Follow below steps
-- Add the HOST_IP and PORT if you want to hard-code the IP and port in dispatcher configuration. 
-You can skip this step as this is being passed in docker run commnad in the next step.
+- (OPTIONAL step) Add the HOST_IP and PORT if you want to hard-code the IP and port in dispatcher configuration. 
+You can skip this step as this is being passed in docker run commnad in the next step. 
 0. Go to `/src/conf.d/variables/default.vars` replace the IP and PORT values as shown below
     ```bash
     Define AEM_IP 192.168.1.18
@@ -17,7 +17,7 @@ You can skip this step as this is being passed in docker run commnad in the next
 0. You can customize almost everything by changing something inside `src` folder. 
 Make sure if you do a major folder change you need to do the same change in dockerfile as well regarding the location.
 
-- Steps to bring up the dispatcher
+- **Steps to bring up the dispatcher**
 0. `docker build -t dispatcher-image . `
 0. `docker run -p 8080:80 -e PUBLISH_DOMAIN=host.docker.internal -e PUBLISH_IP=host.docker.internal -e PUBLISH_PORT=4503 --name dispatcher-container dispatcher-image`
 0. Test by browsing `localhost:8080`. Try a valid URL like `localhost:8080/content/wknd/us/en.html` to verify that it's working or not.
