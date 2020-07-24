@@ -5,6 +5,17 @@ This is an reference repo to setup AEM dispatcher with example configurations.
 0. Download Docker from `https://www.docker.com/products/docker-desktop`
 0. Your AEM publisher should be running and should have valid content pages that are accessible from browser. ex: `localhost:4503/content/wknd/us/en.html`
 
+#### Structure
+```bash
+/
+|-- src
+    |-- conf.d  # Follow https://github.com/adobe/aem-project-archetype. Adobe recommended structure.
+        |-- *
+    |-- conf.dispatcher.d   # Follow https://github.com/adobe/aem-project-archetype. Adobe recommended structure.
+        |-- *   
+|-- dockerfile  # Change this file according to your requirement
+|-- README.md   # Check https://hub.docker.com/r/aemcloud/dispatcher for the latest dispatcher version
+```
 #### Follow below steps
 - (OPTIONAL step) Add the HOST_IP and PORT if you want to hard-code the IP and port in dispatcher configuration. 
 You can skip this step as this is being passed in docker run commnad in the next step. 
