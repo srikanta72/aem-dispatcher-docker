@@ -9,12 +9,12 @@ This is an reference repo to setup AEM dispatcher with example configurations.
 ```bash
 /
 |-- src
-    |-- conf.d  # Follow https://github.com/adobe/aem-project-archetype. Adobe recommended structure.
-        |-- *
-    |-- conf.dispatcher.d   # Follow https://github.com/adobe/aem-project-archetype. Adobe recommended structure.
-        |-- *   
-|-- dockerfile  # Change this file according to your requirement
-|-- README.md   # Check https://hub.docker.com/r/aemcloud/dispatcher for the latest dispatcher version
+|    |-- conf.d  
+|    |   |-- *      # Follow https://github.com/adobe/aem-project-archetype. Adobe recommended structure.
+|    |-- conf.dispatcher.d   
+|    |   |-- *      # Follow https://github.com/adobe/aem-project-archetype. Adobe recommended structure.
+|-- dockerfile      # Change this file according to your requirement. 
+|-- README.md       # Check https://hub.docker.com/r/aemcloud/dispatcher for the latest dispatcher version
 ```
 #### Follow below steps
 - (OPTIONAL step) Add the HOST_IP and PORT if you want to hard-code the IP and port in dispatcher configuration. 
